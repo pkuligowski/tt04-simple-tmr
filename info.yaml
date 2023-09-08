@@ -28,32 +28,32 @@ documentation:
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
-      Explain how your project works
+      It is a simple implementation of one D-flip-flop, three D-flip-flops with TMRed outputs and a single TMRed D-flip-flop that allows to inject errors.
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      Explain how to test your project
+      Set inputs, trigger clock and observe outputs
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - FF0_D_SINGLE
+    - FF1_D_TMRed_WITH_INJECTION
+    - FF2_D_TMRed_OR_INJECT_IN0_OF_D1
+    - FF3_D_TMRed_OR_INJECT_IN1_OF_D1
+    - FF4_D_TMRed_OR_INJECT_IN2_OF_D1
+    - FF1_FF2_FF3_FF4_EN
+    - FF1_INJECT
+    - CLK
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
-    - segment a
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
-    - dot
+    - Q0_SINGLE
+    - FF1_OUT0
+    - FF1_OUT1
+    - FF1_OUT2
+    - FF1_TMRed_OUT
+    - FF2_TMRed_OUT
+    - FF3_TMRed_OUT
+    - FF4_TMRed_OUT
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
     - none
@@ -68,7 +68,7 @@ documentation:
 # The following fields are optional
   tag:          "experimental, tmr"      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
   external_hw:  ""      # Describe any external hardware needed
-  discord:      ""      # Your discord handle, used for communication and automatically assigning tapeout role after a submission
+  discord:      "pkuligowski#9674"      # Your discord handle, used for communication and automatically assigning tapeout role after a submission
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     0       # Clock frequency in Hz (if required)
   picture:      ""      # relative path to a picture in your repository (must be 512kb or less)
